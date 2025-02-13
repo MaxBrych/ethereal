@@ -133,7 +133,6 @@
                 </section>
 
                 <!-- Panel (Gallery) -->
-                <!-- Replacing this panel's <div class="gallery"> with the old layout -->
                 <section class="panel">
                     <div class="intro color2">
                         <h2 class="major">Elit integer</h2>
@@ -509,7 +508,6 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
         ========================================= -->
         <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Create the lightbox container once
             const lightbox = document.createElement('div');
             lightbox.classList.add('lightbox-modal');
 
@@ -537,6 +535,28 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
             closeBtn.addEventListener('click', function() {
                 lightbox.style.display = 'none';
             });
+
+			// Find all .image-container blocks
+const containers = document.querySelectorAll('.image-container');
+
+containers.forEach(container => {
+  // Get *all* images inside
+  const images = container.querySelectorAll('img');
+
+  images.forEach(img => {
+    // Find the caption near this img (if any).
+    // For simplicity, we can still do:
+    const caption = img.closest('a')?.querySelector('figcaption') 
+                     || container.querySelector('figcaption');
+
+    // Attach click
+    img.addEventListener('click', () => {
+      lightboxImg.src = img.src;
+      lightboxCaption.textContent = caption ? caption.textContent : '';
+      lightbox.style.display = 'block';
+    });
+  });
+});
 
             // Find all containers that have images + optional figcaptions
             const imageContainers = document.querySelectorAll('.image-container');
