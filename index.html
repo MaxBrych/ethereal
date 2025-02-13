@@ -45,15 +45,25 @@
                 width: 80%;
                 max-width: 900px;
             }
+            /* Example styling for the close icon */
             .lightbox-close {
                 position: absolute;
-                top: 15px;
-                right: 35px;
+                top: 10px;
+                right: 20px;
                 color: #fff;
-                font-size: 2rem;
-                font-weight: bold;
+                font-size: 1.75rem;
+                font-weight: medium;
                 cursor: pointer;
+				border-radius: 1000px;
+                padding: 8px;
+                border-radius: 400px;
+                transition: background 0.2s;
+			
             }
+            .lightbox-close:hover {
+                background: rgba(255,255,255,0.3);
+            }
+
             .lightbox-img {
                 display: block;
                 width: 100%;
@@ -86,7 +96,6 @@
                             <li><a href="#first" class="button primary color1 circle icon solid fa-angle-right">Next</a></li>
                         </ul>
                     </div>
-                    <!-- Note the .image-container class added -->
                     <div class="image filtered span-1-75 image-container" data-position="25% 25%">
                         <img src="https://images.ctfassets.net/hrltx12pl8hq/3Mz6t2p2yHYqZcIM0ic9E2/3b7037fe8871187415500fb9202608f7/Man-Stock-Photos.jpg" alt="" />
                     </div>
@@ -140,51 +149,42 @@
                     </div>
                     <div class="gallery">
                         <div class="group span-3 image-container">
-                            <a 
-                               class="image filtered span-3" data-position="bottom">
+                            <a class="image filtered span-3" data-position="bottom">
                                 <img src="images/gallery/thumbs/01.jpg" alt="" />
                                 <figcaption>This is a caption for the another image.</figcaption>
                             </a>
-                            <a 
-                               class="image filtered span-1-5" data-position="center">
+                            <a class="image filtered span-1-5" data-position="center">
                                 <img src="images/gallery/thumbs/02.jpg" alt="" />
                                 <figcaption>This is a caption for the another image.</figcaption>
                             </a>
-                            <a 
-                               class="image filtered span-1-5" data-position="bottom">
+                            <a class="image filtered span-1-5" data-position="bottom">
                                 <img src="images/gallery/thumbs/03.jpg" alt="" />
                                 <figcaption>This is a caption for the another image.</figcaption>
                             </a>
                         </div>
-                        <a 
-                           class="image filtered span-2-5 image-container" data-position="top">
+                        <a class="image filtered span-2-5 image-container" data-position="top">
                             <img src="images/gallery/thumbs/04.jpg" alt="" />
                             <figcaption>This is a caption for the another image.</figcaption>
                         </a>
                         <div class="group span-4-5 image-container">
-                            <a 
-                               class="image filtered span-3" data-position="top">
+                            <a class="image filtered span-3" data-position="top">
                                 <img src="images/gallery/thumbs/05.jpg" alt="" />
                                 <figcaption>This is a caption for the another image.</figcaption>
                             </a>
-                            <a 
-                               class="image filtered span-1-5" data-position="center">
+                            <a class="image filtered span-1-5" data-position="center">
                                 <img src="images/gallery/thumbs/06.jpg" alt="" />
                                 <figcaption>This is a caption for the another image.</figcaption>
                             </a>
-                            <a 
-                               class="image filtered span-1-5" data-position="bottom">
+                            <a class="image filtered span-1-5" data-position="bottom">
                                 <img src="images/gallery/thumbs/07.jpg" alt="" />
                                 <figcaption>This is a caption for the another image.</figcaption>
                             </a>
-                            <a 
-                               class="image filtered span-3" data-position="top">
+                            <a class="image filtered span-3" data-position="top">
                                 <img src="images/gallery/thumbs/08.jpg" alt="" />
                                 <figcaption>This is a caption for the another image.</figcaption>
                             </a>
                         </div>
-                        <a 
-                           class="image filtered span-2-5 image-container" data-position="right">
+                        <a class="image filtered span-2-5 image-container" data-position="right">
                             <img src="images/gallery/thumbs/09.jpg" alt="" />
                             <figcaption>This is a caption for the another image.</figcaption>
                         </a>
@@ -238,7 +238,7 @@
                         <p>Sed vel nibh libero. Mauris et lorem pharetra massa lorem turpis congue pulvinar. Vivamus sed feugiat finibus. Duis amet bibendum amet sed. Duis mauris ex, dapibus sed ligula tempus volutpat magna etiam. </p>
                     </div>
                     <div class="inner columns aligned">
-                        <!-- (Rest of your "Elements" panel unchanged) -->
+                     
                         <div class="span-2-75">
                             <h3 class="major">Text</h3>
                             <p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
@@ -490,92 +490,84 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
                     </div>
                 </section>
 
-                <!-- Copyright -->
-                <div class="copyright">
-                    &copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.
-                </div>
-            </div>
-        </div>
+			</div>
+		</section>
 
-        <!-- Scripts -->
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/browser.min.js"></script>
-        <script src="assets/js/breakpoints.min.js"></script>
-        <script src="assets/js/main.js"></script>
+		<!-- Copyright -->
+		<div class="copyright">
+			&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.
+		</div>
+	</div>
+</div>
 
-        <!-- =========================================
-             Lightbox JavaScript
-        ========================================= -->
-        <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const lightbox = document.createElement('div');
-            lightbox.classList.add('lightbox-modal');
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/main.js"></script>
 
-            const lightboxContent = document.createElement('div');
-            lightboxContent.classList.add('lightbox-content');
+<!-- =========================================
+	 Lightbox JavaScript
+========================================= -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+	// Create and insert the lightbox
+	const lightbox = document.createElement('div');
+	lightbox.classList.add('lightbox-modal');
 
-            const closeBtn = document.createElement('span');
-            closeBtn.classList.add('lightbox-close');
-            closeBtn.innerHTML = '&times;';
+	const lightboxContent = document.createElement('div');
+	lightboxContent.classList.add('lightbox-content');
 
-            const lightboxImg = document.createElement('img');
-            lightboxImg.classList.add('lightbox-img');
+	const closeBtn = document.createElement('span');
+	closeBtn.classList.add('lightbox-close');
+	closeBtn.innerHTML = '&times;'; // You can replace this with a custom icon
 
-            const lightboxCaption = document.createElement('div');
-            lightboxCaption.classList.add('lightbox-caption');
+	const lightboxImg = document.createElement('img');
+	lightboxImg.classList.add('lightbox-img');
 
-            // Assemble the lightbox structure
-            lightboxContent.appendChild(closeBtn);
-            lightboxContent.appendChild(lightboxImg);
-            lightboxContent.appendChild(lightboxCaption);
-            lightbox.appendChild(lightboxContent);
-            document.body.appendChild(lightbox);
+	const lightboxCaption = document.createElement('div');
+	lightboxCaption.classList.add('lightbox-caption');
 
-            // Close the lightbox on click of [x]
-            closeBtn.addEventListener('click', function() {
-                lightbox.style.display = 'none';
-            });
+	// Assemble the structure
+	lightboxContent.appendChild(closeBtn);
+	lightboxContent.appendChild(lightboxImg);
+	lightboxContent.appendChild(lightboxCaption);
+	lightbox.appendChild(lightboxContent);
+	document.body.appendChild(lightbox);
 
-			// Find all .image-container blocks
-const containers = document.querySelectorAll('.image-container');
+	// A helper to close the lightbox
+	function closeLightbox() {
+		lightbox.style.display = 'none';
+	}
 
-containers.forEach(container => {
-  // Get *all* images inside
-  const images = container.querySelectorAll('img');
+	// Close on the [x] click
+	closeBtn.addEventListener('click', closeLightbox);
 
-  images.forEach(img => {
-    // Find the caption near this img (if any).
-    // For simplicity, we can still do:
-    const caption = img.closest('a')?.querySelector('figcaption') 
-                     || container.querySelector('figcaption');
+	// *** Close if user clicks on the lightbox overlay (but not the content)
+	lightbox.addEventListener('click', (event) => {
+		// If the click target is the overlay itself (not its children), close.
+		if (event.target === lightbox) {
+			closeLightbox();
+		}
+	});
 
-    // Attach click
-    img.addEventListener('click', () => {
-      lightboxImg.src = img.src;
-      lightboxCaption.textContent = caption ? caption.textContent : '';
-      lightbox.style.display = 'block';
-    });
-  });
+	// Now add click events to images in .image-container
+	const containers = document.querySelectorAll('.image-container');
+
+	containers.forEach(container => {
+		const images = container.querySelectorAll('img');
+		images.forEach(img => {
+			// Try to find a <figcaption> near the image
+			const caption = img.closest('a')?.querySelector('figcaption') 
+						  || container.querySelector('figcaption');
+			img.addEventListener('click', () => {
+				lightboxImg.src = img.src;
+				lightboxCaption.textContent = caption ? caption.textContent : '';
+				lightbox.style.display = 'block';
+			});
+		});
+	});
 });
-
-            // Find all containers that have images + optional figcaptions
-            const imageContainers = document.querySelectorAll('.image-container');
-
-            imageContainers.forEach(function(container) {
-                const img = container.querySelector('img');
-                const caption = container.querySelector('figcaption');
-
-                if (img) {
-                    // On clicking the image, show lightbox
-                    img.addEventListener('click', function() {
-                        lightboxImg.src = img.src;
-                        // If there's a caption, use its text; otherwise empty
-                        lightboxCaption.textContent = caption ? caption.textContent : '';
-                        lightbox.style.display = 'block';
-                    });
-                }
-            });
-        });
-        </script>
-    </body>
+</script>
+</body>
 </html>
