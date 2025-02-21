@@ -297,4 +297,9 @@
 
 			@include panel-colors-small;
 		}
+		
+		.panel.spotlight .content p {
+			column-count: 3;
+			column-gap: 20px;
+		}
 	}

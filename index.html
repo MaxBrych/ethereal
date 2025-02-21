@@ -6,76 +6,101 @@
 -->
 <html>
     <head>
-        <title>Ethereal by HTML5 UP</title>
+        <title>Katrin Harder</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="assets/css/main.css" />
         <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
         <style>
-            .image-container {
-                position: relative;
-                display: inline-block;
-                width: 100%;
-            }
-            .image-container img {
-                display: block;
-                width: 100%;
-                height: auto;
-                cursor: pointer; 
-            }
 
-            /* --------------------------------------------
-               Lightbox (overlay) CSS
-            -------------------------------------------- */
-            .lightbox-modal {
-                display: none;             /* Hidden by default */
-                position: fixed;
-                z-index: 9999;            /* Sit on top */
-                left: 0;
-                top: 0;
-                width: 100%;
-                height: 100%;
-                overflow: auto;
-                background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
-            }
-            .lightbox-content {
-                position: relative;
-                margin: 2% auto;
-                width: 80%;
-                max-width: 900px;
-            }
-            /* Example styling for the close icon */
-            .lightbox-close {
-                position: absolute;
-                top: 10px;
-                right: 20px;
-                color: #fff;
-                font-size: 1.75rem;
-                font-weight: medium;
-                cursor: pointer;
-				border-radius: 1000px;
-                padding: 8px;
-                border-radius: 400px;
-                transition: background 0.2s;
-			
-            }
-            .lightbox-close:hover {
-                background: rgba(255,255,255,0.3);
-            }
+body {
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    url('images/hintergrund/Hintergrund-komplett.png') no-repeat center center fixed;
+  background-size: cover;
+}
 
-            .lightbox-img {
-                display: block;
-                width: 100%;
-                height: auto;
-                margin: 0 auto;
-            }
-            .lightbox-caption {
-                margin-top: 10px;
-                color: #fff;
-                text-align: center;
-                font-size: 1em;
-            }
+/* Example breakpoint at 768px; adjust as needed. */
+@media screen and (max-width: 768px) {
+  .panel.color1 .columns {
+    flex-direction: column;
+    align-items: center;
+  }
+  .panel.color1 .column {
+    min-width: auto; /* Columns can shrink on smaller screens */
+    width: 100%;     /* Let each column take full width on mobile */
+    max-width: 500px;/* Optional: limit max width for readability */
+  }
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+.image-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+  cursor: pointer; 
+}
+/* --------------------------------------------
+   Lightbox (overlay) CSS
+-------------------------------------------- */
+.lightbox-modal {
+  display: none;             /* Hidden by default */
+  position: fixed;
+  z-index: 9999;            /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
+}
+.lightbox-content {
+  position: relative;
+  margin: 2% auto;
+  width: 80%;
+  max-width: 900px;
+}
+/* Example styling for the close icon */
+.lightbox-close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: #fff;
+  font-size: 1.75rem;
+  font-weight: medium;
+  cursor: pointer;
+  border-radius: 1000px;
+  padding: 8px;
+  border-radius: 400px;
+  transition: background 0.2s;
+}
+.lightbox-close:hover {
+  background: rgba(255,255,255,0.3);
+}
+
+.lightbox-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+.lightbox-caption {
+  margin-top: 10px;
+  color: #fff;
+  text-align: center;
+  font-size: 1em;
+}
+
+@media only screen and (max-width: 600px) {
+    .intro.joined {
+      text-align: left !important;
+    }
+  }
         </style>
     </head>
     <body class="is-preload">
@@ -88,428 +113,242 @@
 
                 <!-- Panel (Banner) -->
                 <section class="panel banner right">
-                    <div class="content color0 span-3-75">
-                        <h1 class="major">Hello, my name<br />
-                        is Ethereal</h1>
-                        <p>This is <strong>Ethereal</strong>, a free site template by AJ for <a href="https://html5up.net">HTML5 UP</a>. It’s fully responsive, built on HTML5 and CSS3, and released entirely for free under the Creative Commons license. Hope you dig it :)</p>
+                    <div class="content span-3-75" style="background-color: black;">
+                        
+                        <h1 class="major">Hi, Ich bin<br />
+                        
+                            Katrin Harder</h1>
+                        <p>Ich zeichne und kreiere am liebsten <a href="https://html5up.net">Kunst und Illustrationen</a>. In Verbindung
+                            mit Musik. Sei auf dem Laufenden und schau auf Instagram vorbei.</p> 
                         <ul class="actions">
-                            <li><a href="#first" class="button primary color1 circle icon solid fa-angle-right">Next</a></li>
+                            <li><a href="#first" class="button primary color1 circle icon solid fa-angle-right">Weiter</a></li>
+                        </ul>
+                        <ul class="icons">
+                            <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                            <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                            <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
                         </ul>
                     </div>
                     <div class="image filtered span-1-75 image-container" data-position="25% 25%">
-                        <img src="https://images.ctfassets.net/hrltx12pl8hq/3Mz6t2p2yHYqZcIM0ic9E2/3b7037fe8871187415500fb9202608f7/Man-Stock-Photos.jpg" alt="" />
+                        <img src="images/about-me/Portrait-Augen-auf.png" alt="" />
                     </div>
                 </section>
 
-                <!-- Panel (Spotlight) -->
-                <section class="panel spotlight medium right" id="first">
-                    <div class="content span-7">
-                        <h2 class="major">Sed etiam aenean</h2>
-                        <p>Mauris et ligula arcu. Proin dapibus convallis accumsan. Lorem maximus hendrerit orci, sit amet elementum massa hendrerit sed. Donec et ullamcorper ligula. Suspendisse amet potenti. Ut pretium libero eleifend euismod sed tristique. Quisque dictum magna risus, id ultricies justo sagittis vitae. Sed id odio tempor, porttitor elit amet, gravida hendrerit fringilla lorem ipsum dolor.</p>
-                    </div>
-                    <div class="image filtered tinted image-container" data-position="top left">
-                        <img src="https://brandingforthepeople.com/wp-content/uploads/2019/04/Stock-Photography-vs-Real-Imagery.jpg" alt="" />
-                    </div>
-                </section>
-
-                <!-- Panel -->
-                <section class="panel color1">
-                    <div class="intro joined">
-                        <h2 class="major">Amet lorem</h2>
-                        <p>Sed vel nibh libero. Mauris et lorem pharetra massa lorem turpis congue pulvinar. Vivamus sed feugiat finibus. Duis amet bibendum amet sed. Duis mauris ex, dapibus sed ligula tempus volutpat magna etiam.</p>
-                    </div>
-                    <div class="inner">
-                        <ul class="grid-icons three connected">
-                            <li><span class="icon fa-gem"><span class="label">Lorem</span></span></li>
-                            <li><span class="icon solid fa-camera-retro"><span class="label">Ipsum</span></span></li>
-                            <li><span class="icon solid fa-cog"><span class="label">Dolor</span></span></li>
-                            <li><span class="icon solid fa-paper-plane"><span class="label">Sit</span></span></li>
-                            <li><span class="icon solid fa-chart-bar"><span class="label">Amet</span></span></li>
-                            <li><span class="icon solid fa-code"><span class="label">Nullam</span></span></li>
-                        </ul>
-                    </div>
-                </section>
-
-                <!-- Panel (Spotlight) -->
-                <section class="panel spotlight large left">
-                    <div class="content span-5">
-                        <h2 class="major">Magna amet tempus</h2>
-                        <p>Mauris a cursus velit. Nunc lacinia sollicitudin egestas bibendum, magna dui bibendum ex, sagittis commodo enim risus sed magna nulla. Vestibulum ut consequat velit. Curabitur vitae libero lorem. Quisque iaculis porttitor blandit. Nullam quis sagittis maximus. Sed vel nibh libero. Mauris et lorem pharetra massa lorem turpis congue pulvinar.</p>
-                    </div>
-                    <div class="image filtered tinted image-container" data-position="top right">
-                        <img src="https://cdn.create.vista.com/api/media/small/173653508/stock-photo-businessman-with-sticky-note-on-forehead" alt="" />
-                    </div>
-                </section>
-
-                <!-- Panel (Gallery) -->
-                <section class="panel">
-                    <div class="intro color2">
-                        <h2 class="major">Elit integer</h2>
-                        <p>Sed vel nibh libero. Mauris et lorem pharetra massa lorem turpis congue pulvinar. Vivamus sed feugiat finibus. Duis amet bibendum amet sed. Duis mauris ex, dapibus sed ligula tempus volutpat magna etiam.</p>
+                 <!-- Panel (Gallery) -->
+                 <section class="panel" style="background-color: white; color: black;">
+                    <div class="intro ">
+                        <h2 class="major" style="color: black;">Meine Kunst</h2>
+                        <p>Einige Darstellungen meiner Zeichnungen, darunter kurze Beschreibung</p>
                     </div>
                     <div class="gallery">
                         <div class="group span-3 image-container">
                             <a class="image filtered span-3" data-position="bottom">
-                                <img src="images/gallery/thumbs/01.jpg" alt="" />
-                                <figcaption>This is a caption for the another image.</figcaption>
+                                <img src="images/eigene-kunst/Herzschlag.png" alt="" />
+                                <figcaption>Herzschlag (Fineliner, Marker, Buntstift auf Papier)</figcaption>
                             </a>
                             <a class="image filtered span-1-5" data-position="center">
-                                <img src="images/gallery/thumbs/02.jpg" alt="" />
-                                <figcaption>This is a caption for the another image.</figcaption>
+                                <img src="images/eigene-kunst/šber-den-Wolken.png" alt="" />
+                                <figcaption>Über den Wolken (Fineliner, Marker auf Papier)</figcaption>
                             </a>
                             <a class="image filtered span-1-5" data-position="bottom">
-                                <img src="images/gallery/thumbs/03.jpg" alt="" />
-                                <figcaption>This is a caption for the another image.</figcaption>
+                                <img src="images/eigene-kunst/Gep„ck.png" alt="" />
+                                <figcaption>Gepäck (Fineliner, Marker auf Papier)</figcaption>
                             </a>
                         </div>
                         <a class="image filtered span-2-5 image-container" data-position="top">
-                            <img src="images/gallery/thumbs/04.jpg" alt="" />
-                            <figcaption>This is a caption for the another image.</figcaption>
+                            <img src="images/eigene-kunst/Phase.png" alt="" />
+                            <figcaption>Phase (Fineliner, Marker auf Papier)</figcaption>
                         </a>
                         <div class="group span-4-5 image-container">
                             <a class="image filtered span-3" data-position="top">
-                                <img src="images/gallery/thumbs/05.jpg" alt="" />
-                                <figcaption>This is a caption for the another image.</figcaption>
+                                <img src="images/eigene-kunst/Feuervogel.png" alt="" />
+                                <figcaption>Feuervogel (Fineliner, Marker, Buntstift auf Papier)</figcaption>
                             </a>
                             <a class="image filtered span-1-5" data-position="center">
-                                <img src="images/gallery/thumbs/06.jpg" alt="" />
-                                <figcaption>This is a caption for the another image.</figcaption>
+                                <img src="images/eigene-kunst/Wachsen.png" alt="" />
+                                <figcaption>Wachsen (Fineliner, Marker auf Papier)</figcaption>
                             </a>
                             <a class="image filtered span-1-5" data-position="bottom">
-                                <img src="images/gallery/thumbs/07.jpg" alt="" />
-                                <figcaption>This is a caption for the another image.</figcaption>
+                                <img src="images/eigene-kunst/5-Bienen.png" alt="" />
+                                <figcaption> 5 Bienen (Fineliner, Marker auf Papier)</figcaption>
                             </a>
                             <a class="image filtered span-3" data-position="top">
-                                <img src="images/gallery/thumbs/08.jpg" alt="" />
-                                <figcaption>This is a caption for the another image.</figcaption>
+                                <img src="images/eigene-kunst/Feuerball.png" alt="" />
+                                <figcaption>Feuerball (Fineliner, Marker auf Papier)</figcaption>
                             </a>
                         </div>
                         <a class="image filtered span-2-5 image-container" data-position="right">
-                            <img src="images/gallery/thumbs/09.jpg" alt="" />
-                            <figcaption>This is a caption for the another image.</figcaption>
+                            <img src="images/eigene-kunst/Lost-Tape.png" alt="" />
+                            <figcaption>Lost Tape (Fineliner, Marker auf Papier)</figcaption>
                         </a>
                     </div>
                 </section>
 
-                <!-- Panel -->
-                <section class="panel color4-alt">
-                    <div class="intro color4">
-                        <h2 class="major">Contact</h2>
-                        <p>Sed vel nibh libero. Mauris et lorem pharetra massa lorem turpis congue pulvinar. Vivamus sed feugiat finibus. Duis amet bibendum amet sed. Duis mauris ex, dapibus sed ligula tempus volutpat magna etiam.</p>
+                <!-- Panel (Exhibition/Ausstellung) -->
+                <section class="panel "
+                         style="
+                           width: 100%;
+                           max-width: 960px;
+                           margin: 0 auto;
+                           padding: 1rem 1rem;
+                           box-sizing: border-box;
+                           height: auto; 
+                           background-color: black;
+                           color: white;
+                         ">
+                  <!-- Override the 22rem width from _panel.scss -->
+                  <div class="intro joined"
+                       style="
+                         width: auto !important; 
+                         max-width: 800px; 
+                         margin: 0 auto; 
+                         text-align: center;
+                       ">
+                    <h2 class="major">Exhibition/Ausstellung</h2>
+
+                    <!-- Columns Container -->
+                    <div class="columns"
+                         style="
+                           display: flex;
+                           flex-wrap: wrap;
+                           justify-content: center;
+                           gap: 2rem; /* Space between columns */
+                           margin-top: 20px;
+                         ">
+                      <!-- Column 1 -->
+                      <div class="column"
+                           style="
+                             /* On desktop, each column is about one-third of container */
+                             flex: 1 1 calc(33.333% - 2rem);
+                             min-width: 160px;
+                             box-sizing: border-box;
+                           ">
+                        <p>
+                            Ausstellung „Der Rote Faden – Jede Linie führt zur Musik“ in der Scheune Bollewick mit
+                            über 70 Werken vom 06.10.2023 bis 01.03.2024.
+                        </p>
+                      </div>
+
+                      <!-- Column 2 -->
+                      <div class="column"
+                           style="
+                             flex: 1 1 calc(33.333% - 2rem);
+                             min-width: 160px;
+                             box-sizing: border-box;
+                           ">
+                        <p>
+                            Ausstellung „Der Rote Faden – Jede Linie führt zur Musik“ im Hofcafe Lebbin mit 20
+                            Werken vom 16.03.2024 bis 05.05.2024.
+                        </p>
+                      </div>
+
+                      <!-- Column 3 -->
+                      <div class="column"
+                           style="
+                             flex: 1 1 calc(33.333% - 2rem);
+                             min-width: 160px;
+                             box-sizing: border-box;
+                           ">
+                        <p>
+                            Kleine Dauerausstellung „Kunst in der Praxis“ mit einigen Werken in der
+                            Allgemeinarztpraxis Jenny Leonhardt in Röbel, seit August 2024.
+                        </p>
+                      </div>
                     </div>
-                    <div class="inner columns divided">
-                        <div class="span-3-25">
-                            <form method="post" action="#">
-                                <div class="fields">
-                                    <div class="field half">
-                                        <label for="name">Name</label>
-                                        <input type="text" name="name" id="name" />
-                                    </div>
-                                    <div class="field half">
-                                        <label for="email">Email</label>
-                                        <input type="email" name="email" id="email" />
-                                    </div>
-                                    <div class="field">
-                                        <label for="message">Message</label>
-                                        <textarea name="message" id="message" rows="4"></textarea>
-                                    </div>
-                                </div>
-                                <ul class="actions">
-                                    <li><input type="submit" value="Send Message" class="button primary" /></li>
-                                </ul>
-                            </form>
-                        </div>
-                        <div class="span-1-5">
-                            <ul class="contact-icons color1">
-                                <li class="icon brands fa-twitter"><a href="#">@untitled-tld</a></li>
-                                <li class="icon brands fa-facebook-f"><a href="#">facebook.com/untitled</a></li>
-                                <li class="icon brands fa-snapchat-ghost"><a href="#">@untitled-tld</a></li>
-                                <li class="icon brands fa-instagram"><a href="#">@untitled-tld</a></li>
-                                <li class="icon brands fa-medium-m"><a href="#">medium.com/untitled</a></li>
-                            </ul>
-                        </div>
+                    <!-- /Columns Container -->
+                  </div>
+                </section>
+
+                <!-- Mobile Overrides -->
+                <style>
+                  /* On screens <= 768px, stack columns */
+                  @media screen and (max-width: 768px) {
+                    .panel.color1 .columns {
+                      flex-direction: column !important;
+                      align-items: center !important;
+                    }
+                    .panel.color1 .column {
+                      flex: 1 1 100% !important;
+                      min-width: auto !important;
+                      max-width: 500px; /* Optional for readability */
+                    }
+                  }
+                </style>
+
+                <!-- Panel (Customized Artwork/Collaborations) -->
+                <section class="panel spotlight large left" style="background-color: black; color: white;">
+                    <div class="content span-5">
+                        <h2 class="major">Customized Artwork/Collaborations</h2>
+                        <p>
+                          Neben meiner eigenen Kunst gehe ich gerne Kollaborationen in Verbindung mit Musik ein.
+                          Lasst eure Musik durch individuelle Bilder in Form von Illustrationen und Layouts für eure neue
+                          Veröffentlichung sprechen. Ich liebe Musik!
+                        </p>
+                    </div>
+                    <div class="image filtered tinted image-container" data-position="top right">
+                        <img src="images/customized-art/Drumbase RSM.jpg" alt="" />
+                    </div>
+                </section>
+ 
+               
+
+                <!-- Panel (Events) -->
+                <section class="panel "
+                style="
+                  /* Let the panel expand up to 1200px on large screens */
+                  width: 100%;
+                  max-width: 720px;
+                  margin: 0 auto;
+                  padding: 2rem 1rem;
+                  box-sizing: border-box;
+                  height: auto; /* No forced height */
+                  background-color: black;
+                  color: white;
+                ">
+                <!-- Override any fixed width from _panel.scss -->
+                <div class="intro joined"
+                style="
+                width: auto !important;
+                max-width: 640px;
+                margin: 0 auto;
+                text-align: center;
+                ">
+                <h2 class="major">Events</h2>
+                <p style="text-align: left;">
+                    
+                Vernissage am 06.10.2023 zu „Der Rote Faden – Jede Linie führt zur Musik“  
+                Eröffnungsveranstaltung mit einem Unplugged Konzert von Growing Echo
+                </p>
+                <p style="text-align: left;">
+                    
+                Finissage am 01.03.2024 zu „Der Rote Faden – Jede Linie führt zur Musik“  
+                Abschlussveranstaltung mit einem Live-Online Konzert von Sivan Amran und  
+                Oren Gilad (Shadow Ensemble)
+                </p>
+                </div>
+                </section>
+
+                <!-- Panel (Kontakt) -->
+                <section class="panel " style="background-color: white; color: black;">
+                    <div class="intro ">
+                        <h2 class="major" style="color: black;">Kontakt</h2>
+                        <p>brokenlines-art@gmail.com oder katrin.harder@brokenlines-art.com</p>
                     </div>
                 </section>
 
-                <!-- Panel -->
-                <section class="panel color2-alt">
-                    <div class="intro color2">
-                        <h2 class="major">Elements</h2>
-                        <p>Sed vel nibh libero. Mauris et lorem pharetra massa lorem turpis congue pulvinar. Vivamus sed feugiat finibus. Duis amet bibendum amet sed. Duis mauris ex, dapibus sed ligula tempus volutpat magna etiam. </p>
-                    </div>
-                    <div class="inner columns aligned">
-                     
-                        <div class="span-2-75">
-                            <h3 class="major">Text</h3>
-                            <p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-                            This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-                            This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
+            </div>
+        </div>
 
-                            <h1>Heading Level 1</h1>
-                            <h2>Heading Level 2</h2>
-                            <h3>Heading Level 3</h3>
-                            <h4>Heading Level 4</h4>
-                            <h5>Heading Level 5</h5>
-                            <h6>Heading Level 6</h6>
-                        </div>
-                        <div class="span-3">
-                            <h4>Blockquote</h4>
-                            <blockquote>Lorem ipsum dolor sit amet. Felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in vestibulum. Blandit adipiscing eu iaculis volutpat ac adipiscing volutpat ac adipiscing faucibus.</blockquote>
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/main.js"></script>
 
-                            <h4>Preformatted</h4>
-                            <pre><code>i = 0;
-
-while (!deck.isInOrder()) {
-    print 'Iteration ' + (i++);
-    deck.shuffle();
-}
-
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-                        </div>
-                        <div class="span-1-25">
-                            <h3 class="major">Lists</h3>
-                            <h4>Unordered</h4>
-                            <ul>
-                                <li>Lorem ipsum dolor sit.</li>
-                                <li>Dolor pulvinar etiam.</li>
-                                <li>Etiam vel felis viverra.</li>
-                            </ul>
-
-                            <h4>Alternate</h4>
-                            <ul class="alt">
-                                <li>Lorem ipsum dolor sit.</li>
-                                <li>Dolor pulvinar etiam.</li>
-                                <li>Etiam vel felis viverra.</li>
-                                <li>Felis enim feugiat.</li>
-                            </ul>
-                        </div>
-                        <div class="span-1-5">
-                            <h4>Ordered</h4>
-                            <ol>
-                                <li>Lorem ipsum dolor sit.</li>
-                                <li>Dolor pulvinar etiam.</li>
-                                <li>Etiam vel felis viverra.</li>
-                                <li>Felis enim feugiat.</li>
-                                <li>Etiam vel felis lorem.</li>
-                            </ol>
-
-                            <h4>Actions</h4>
-                            <ul class="actions">
-                                <li><a href="#" class="button primary color2">Default</a></li>
-                                <li><a href="#" class="button">Default</a></li>
-                            </ul>
-                            <ul class="actions stacked">
-                                <li><a href="#" class="button primary color2">Default</a></li>
-                                <li><a href="#" class="button">Default</a></li>
-                            </ul>
-                        </div>
-                        <div class="span-1-25">
-                            <h4>Icons</h4>
-                            <ul class="icons">
-                                <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-                                <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-                                <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-                                <li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-                                <li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
-                            </ul>
-
-                            <h4>Contact Icons</h4>
-                            <ul class="contact-icons color2">
-                                <li class="icon brands fa-twitter"><a href="#">Twitter</a></li>
-                                <li class="icon brands fa-facebook-f"><a href="#">Facebook</a></li>
-                                <li class="icon brands fa-instagram"><a href="#">Instagram</a></li>
-                                <li class="icon brands fa-github"><a href="#">GitHub</a></li>
-                                <li class="icon brands fa-medium-m"><a href="#">Medium</a></li>
-                            </ul>
-                        </div>
-                        <div class="span-3">
-                            <h3 class="major">Table</h3>
-                            <h4>Default</h4>
-                            <div class="table-wrapper">
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th>Name</th>
-                                            <th>Description</th>
-                                            <th>Price</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Item One</td>
-                                            <td>Ante turpis integer aliquet porttitor.</td>
-                                            <td>29.99</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Item Two</td>
-                                            <td>Vis ac commodo adipiscing arcu aliquet.</td>
-                                            <td>19.99</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Item Three</td>
-                                            <td> Morbi faucibus arcu accumsan lorem.</td>
-                                            <td>29.99</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Item Four</td>
-                                            <td>Vitae integer tempus condimentum.</td>
-                                            <td>19.99</td>
-                                        </tr>
-                                    </tbody>
-                                    <tfoot>
-                                        <tr>
-                                            <td colspan="2"></td>
-                                            <td>100.00</td>
-                                        </tr>
-                                    </tfoot>
-                                </table>
-                            </div>
-                        </div>
-                        <div class="span-3">
-                            <h4>Alternate</h4>
-                            <div class="table-wrapper">
-                                <table class="alt">
-                                    <thead>
-                                        <tr>
-                                            <th>Name</th>
-                                            <th>Description</th>
-                                            <th>Price</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Item One</td>
-                                            <td>Ante turpis integer aliquet porttitor.</td>
-                                            <td>29.99</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Item Two</td>
-                                            <td>Vis ac commodo adipiscing arcu aliquet.</td>
-                                            <td>19.99</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Item Three</td>
-                                            <td> Morbi faucibus arcu accumsan lorem.</td>
-                                            <td>29.99</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Item Four</td>
-                                            <td>Vitae integer tempus condimentum.</td>
-                                            <td>19.99</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Item Five</td>
-                                            <td>Ante turpis integer aliquet porttitor.</td>
-                                            <td>29.99</td>
-                                        </tr>
-                                    </tbody>
-                                    <tfoot>
-                                        <tr>
-                                            <td colspan="2"></td>
-                                            <td>100.00</td>
-                                        </tr>
-                                    </tfoot>
-                                </table>
-                            </div>
-                        </div>
-                        <div class="span-2-25">
-                            <h3 class="major">Buttons</h3>
-                            <ul class="actions">
-                                <li><a href="#" class="button primary color2">Primary</a></li>
-                                <li><a href="#" class="button">Default</a></li>
-                            </ul>
-                            <ul class="actions">
-                                <li><a href="#" class="button">Default</a></li>
-                                <li><a href="#" class="button large">Large</a></li>
-                                <li><a href="#" class="button small">Small</a></li>
-                            </ul>
-                            <ul class="actions">
-                                <li><a href="#" class="button primary color2 icon solid fa-cog">Icon</a></li>
-                                <li><a href="#" class="button icon fa-gem">Icon</a></li>
-                            </ul>
-                            <ul class="actions">
-                                <li><span class="button primary color2 disabled">Disabled</span></li>
-                                <li><span class="button disabled">Disabled</span></li>
-                            </ul>
-                            <ul class="actions">
-                                <li><a href="#" class="button primary color2 circle icon solid fa-cog">Icon</a></li>
-                                <li><a href="#" class="button circle icon fa-gem">Icon</a></li>
-                            </ul>
-                        </div>
-                        <div class="span-4-5">
-                            <h3 class="major">Form</h3>
-                            <form method="post" action="#">
-                                <div class="fields">
-                                    <div class="field third">
-                                        <label for="demo-name">Name</label>
-                                        <input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
-                                    </div>
-                                    <div class="field third">
-                                        <label for="demo-email">Email</label>
-                                        <input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@untitled.tld" />
-                                    </div>
-                                    <div class="field third">
-                                        <label for="demo-category">Category</label>
-                                        <div class="select-wrapper">
-                                            <select name="demo-category" id="demo-category">
-                                                <option value="">-</option>
-                                                <option value="1">Manufacturing</option>
-                                                <option value="1">Shipping</option>
-                                                <option value="1">Administration</option>
-                                                <option value="1">Human Resources</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="field quarter">
-                                        <input type="radio" id="demo-priority-low" name="demo-priority" class="color2" checked />
-                                        <label for="demo-priority-low">Low Priority</label>
-                                    </div>
-                                    <div class="field quarter">
-                                        <input type="radio" id="demo-priority-high" name="demo-priority" class="color2" />
-                                        <label for="demo-priority-high">High Priority</label>
-                                    </div>
-                                    <div class="field quarter">
-                                        <input type="checkbox" id="demo-copy" name="demo-copy" class="color2" />
-                                        <label for="demo-copy">Email a copy</label>
-                                    </div>
-                                    <div class="field quarter">
-                                        <input type="checkbox" id="demo-human" name="demo-human" class="color2" checked />
-                                        <label for="demo-human">Not a robot</label>
-                                    </div>
-                                    <div class="field">
-                                        <label for="demo-message">Message</label>
-                                        <textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="2"></textarea>
-                                    </div>
-                                </div>
-                                <ul class="actions">
-                                    <li><input type="submit" value="Send Message" class="primary color2" /></li>
-                                    <li><input type="reset" value="Reset" /></li>
-                                </ul>
-                            </form>
-                        </div>
-                    </div>
-                </section>
-
-			</div>
-		</section>
-
-		<!-- Copyright -->
-		<div class="copyright">
-			&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.
-		</div>
-	</div>
-</div>
-
-<!-- Scripts -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/main.js"></script>
-
-<!-- =========================================
-	 Lightbox JavaScript
-========================================= -->
-<script>
+        <!-- =========================================
+             Lightbox JavaScript
+        ========================================= -->
+        <script>
 document.addEventListener('DOMContentLoaded', function() {
 	// Create and insert the lightbox
 	const lightbox = document.createElement('div');
@@ -568,6 +407,6 @@ document.addEventListener('DOMContentLoaded', function() {
 		});
 	});
 });
-</script>
-</body>
+        </script>
+    </body>
 </html>

@@ -25,6 +25,14 @@
 			@include padding($pad, $pad);
 		}
 
+		p{
+			color: black;
+		}
+
+		.major{
+			color: black;
+		}
+
 		.image {
 			position: absolute;
 			top: 0;
@@ -48,7 +56,7 @@
 			@include vendor('justify-content', 'flex-start');
 
 			.content {
-				background-image: linear-gradient(-90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.125) 30%, rgba(0,0,0,0.175) 50%);
+				background-image: linear-gradient(-90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.525) 30%, rgba(0,0,0,0.175) 50%);
 			}
 		}
 
