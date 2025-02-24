@@ -1747,6 +1747,8 @@ input, select, textarea {
 
 		.image.filtered.tinted:after {
 			background-size: 128px 128px, auto, auto;
+			background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+
 		}
 
 		.image[data-position] img {
