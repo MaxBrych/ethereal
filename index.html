@@ -142,7 +142,7 @@ body {
                     </div>
                     <div class="gallery">
                         <div class="group span-3 image-container">
-                            <a class="image filtered span-3" data-position="bottom">
+                            <a class="image filtered span-3" data-position="center">
                                 <img src="images/eigene-kunst/Herzschlag.png" alt="" />
                                 <figcaption>Herzschlag (Fineliner, Marker, Buntstift auf Papier)</figcaption>
                             </a>
@@ -160,7 +160,7 @@ body {
                             <figcaption>Phase (Fineliner, Marker auf Papier)</figcaption>
                         </a>
                         <div class="group span-4-5 image-container">
-                            <a class="image filtered span-3" data-position="top">
+                            <a class="image filtered span-3" data-position="center">
                                 <img src="images/eigene-kunst/Feuervogel.png" alt="" />
                                 <figcaption>Feuervogel (Fineliner, Marker, Buntstift auf Papier)</figcaption>
                             </a>
@@ -275,21 +275,245 @@ body {
                   }
                 </style>
 
-                <!-- Panel (Customized Artwork/Collaborations) -->
-                <section class="panel spotlight large left" style="background-color: black; color: white;">
-                    <div class="content span-5">
-                        <h2 class="major">Customized Artwork/Collaborations</h2>
-                        <p>
-                          Neben meiner eigenen Kunst gehe ich gerne Kollaborationen in Verbindung mit Musik ein.
-                          Lasst eure Musik durch individuelle Bilder in Form von Illustrationen und Layouts für eure neue
-                          Veröffentlichung sprechen. Ich liebe Musik!
-                        </p>
-                    </div>
-                    <div class="image filtered tinted image-container" data-position="top right">
-                        <img src="images/customized-art/Sammeldarstellung.jpg" alt="" />
-                    </div>
-                </section>
- 
+<!-- Panel (Customized Artwork/Collaborations) -->
+<section class="panel spotlight large left" style="background-color: black; color: white;">
+  <div class="content span-5">
+    <h2 class="major" style="text-shadow: 0px 2px 4px rgba(0,0,0,0.4);">
+      Customized Artwork/Collaborations
+    </h2>
+    <p style="text-shadow: 0px 2px 4px rgba(0,0,0,0.6);">
+      Neben meiner eigenen Kunst gehe ich gerne Kollaborationen in Verbindung mit Musik ein.
+      Lasst eure Musik durch individuelle Bilder in Form von Illustrationen und Layouts für eure neue
+      Veröffentlichung sprechen. Ich liebe Musik!
+    </p>
+
+    <!-- Thumbnail Gallery: 2 rows, 4 images per row -->
+    <div 
+      class="custom-collab-gallery" 
+      style="
+        display: flex; 
+        flex-wrap: wrap; 
+        gap: 1rem; 
+        margin-top: 1rem; 
+        justify-content: center;
+      "
+    >
+      <!-- 1 -->
+      <a 
+        class="image-container" 
+        style="
+          flex: 0 0 calc(25% - 1rem); 
+          text-decoration: none; 
+          outline: none; 
+          border: none;
+        "
+      >
+        <img 
+          src="images/customized-art/Drumbase RSM.jpg" 
+          alt="" 
+          style="
+            width: 72px; 
+            height: 72px; 
+            border-radius: 12px; 
+            border: 2px solid rgba(209, 209, 209, 0.444); 
+            object-fit: cover; 
+            cursor: pointer;
+            object-position: center;
+          "
+        />
+        <!-- Hidden caption for the lightbox -->
+        <figcaption style="display: none;">Album 1 Artwork</figcaption>
+      </a>
+
+      <!-- 2 -->
+      <a 
+        class="image-container" 
+        style="
+          flex: 0 0 calc(25% - 1rem); 
+          text-decoration: none; 
+          outline: none; 
+          border: none;
+        "
+      >
+        <img 
+          src="images/customized-art/GE Live Rec Produktansichtr.jpg" 
+          alt="" 
+          style="
+            width: 72px; 
+            height: 72px; 
+            border-radius: 12px; 
+            border: 2px solid rgba(209, 209, 209, 0.444); 
+            object-fit: cover; 
+            cursor: pointer;
+            object-position: center;
+          "
+        />
+        <figcaption style="display: none;">Album 2 Artwork</figcaption>
+      </a>
+
+      <!-- 3 -->
+      <a 
+        class="image-container" 
+        style="
+          flex: 0 0 calc(25% - 1rem); 
+          text-decoration: none; 
+          outline: none; 
+          border: none;
+        "
+      >
+        <img  
+          src="images/customized-art/GE Live Recordings Cover.png" 
+          alt="" 
+          style="
+            width: 72px; 
+            height: 72px; 
+            border-radius: 12px; 
+            border: 2px solid rgba(209, 209, 209, 0.444); 
+            object-fit: cover; 
+            cursor: pointer;
+            object-position: center;
+          "
+        />
+        <figcaption style="display: none;">Album 3 Artwork</figcaption>
+      </a>
+
+      <!-- 4 -->
+      <a 
+        class="image-container" 
+        style="
+          flex: 0 0 calc(25% - 1rem); 
+          text-decoration: none; 
+          outline: none; 
+          border: none;
+        "
+      >
+        <img  
+          src="images/customized-art/GE Monarch Cover.jpg" 
+          alt="" 
+          style="
+            width: 72px; 
+            height: 72px; 
+            border-radius: 12px; 
+            border: 2px solid rgba(209, 209, 209, 0.444); 
+            object-fit: cover; 
+            cursor: pointer;
+            object-position: center;
+          "
+        />
+        <figcaption style="display: none;">Album 4 Artwork</figcaption>
+      </a>
+
+      <!-- 5 -->
+      <a 
+        class="image-container" 
+        style="
+          flex: 0 0 calc(25% - 1rem); 
+          text-decoration: none; 
+          outline: none; 
+          border: none;
+        "
+      >
+        <img  
+          src="images/customized-art/IC Falkenberg Komm an Land Cover.jpg" 
+          alt="" 
+          style="
+            width: 72px; 
+            height: 72px; 
+            border-radius: 12px; 
+            border: 2px solid rgba(209, 209, 209, 0.444); 
+            object-fit: cover; 
+            cursor: pointer;
+            object-position: center;
+          "
+        />
+        <figcaption style="display: none;">Album 5 Artwork</figcaption>
+      </a>
+
+      <!-- 6 -->
+      <a 
+        class="image-container" 
+        style="
+          flex: 0 0 calc(25% - 1rem); 
+          text-decoration: none; 
+          outline: none; 
+          border: none;
+        "
+      >
+        <img  
+          src="images/customized-art/Komm An Land Produktansicht.jpg" 
+          alt="" 
+          style="
+            width: 72px; 
+            height: 72px; 
+            border-radius: 12px; 
+            border: 2px solid rgba(209, 209, 209, 0.444); 
+            object-fit: cover; 
+            cursor: pointer;
+            object-position: center;
+          "
+        />
+        <figcaption style="display: none;">Album 6 Artwork</figcaption>
+      </a>
+
+      <!-- 7 -->
+      <a 
+        class="image-container" 
+        style="
+          flex: 0 0 calc(25% - 1rem); 
+          text-decoration: none; 
+          outline: none; 
+          border: none;
+        "
+      >
+        <img  
+          src="images/customized-art/Sivan Arched Path Cover.jpg" 
+          alt="" 
+          style="
+            width: 72px; 
+            height: 72px; 
+            border-radius: 12px; 
+            border: 2px solid rgba(209, 209, 209, 0.444); 
+            object-fit: cover; 
+            cursor: pointer;
+            object-position: center;
+          "
+        />
+        <figcaption style="display: none;">Album 7 Artwork</figcaption>
+      </a>
+
+      <!-- 8 -->
+      <a 
+        class="image-container" 
+        style="
+          flex: 0 0 calc(25% - 1rem); 
+          text-decoration: none; 
+          outline: none; 
+          border: none;
+        "
+      >
+        <img  
+          src="images/customized-art/Sivan Scrape Cover.png" 
+          alt="" 
+          style="
+            width: 72px; 
+            height: 72px; 
+            border-radius: 12px; 
+            border: 2px solid rgba(209, 209, 209, 0.444); 
+            object-fit: cover; 
+            cursor: pointer;
+            object-position: center;
+          "
+        />
+        <figcaption style="display: none;">Album 8 Artwork</figcaption>
+      </a>
+    </div>
+    <!-- End Thumbnail Gallery -->
+
+  </div>
+  <div class="image filtered tinted image-container" data-position="center">
+    <img src="images/customized-art/Sammeldarstellung2.jpg" alt="" />
+  </div>
+</section>
                
 
                 <!-- Panel (Events) -->
