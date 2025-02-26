@@ -13,7 +13,6 @@
         <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
         <style>
-
 body {
   background: 
     linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
@@ -45,27 +44,32 @@ body {
   height: auto;
   cursor: pointer; 
 }
+
 /* --------------------------------------------
-   Lightbox (overlay) CSS
+   Lightbox (overlay) CSS - updated to fit screen height
 -------------------------------------------- */
 .lightbox-modal {
-  display: none;             /* Hidden by default */
+  display: none;             
   position: fixed;
-  z-index: 9999;            /* Sit on top */
+  z-index: 9999;            
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
+  background-color: rgba(0, 0, 0, 0.8);
 }
 .lightbox-content {
   position: relative;
   margin: 2% auto;
   width: 80%;
   max-width: 900px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-/* Example styling for the close icon */
 .lightbox-close {
   position: absolute;
   top: 10px;
@@ -74,7 +78,6 @@ body {
   font-size: 1.75rem;
   font-weight: medium;
   cursor: pointer;
-  border-radius: 1000px;
   padding: 8px;
   border-radius: 400px;
   transition: background 0.2s;
@@ -85,8 +88,8 @@ body {
 
 .lightbox-img {
   display: block;
-  width: 100%;
-  height: auto;
+  max-height: 80vh;
+  width: auto;
   margin: 0 auto;
 }
 .lightbox-caption {
@@ -97,26 +100,26 @@ body {
 }
 
 .hover-shadow {
-    width: 72px;
-    height: 72px;
-    min-height: 72px;
-    border-radius: 12px;
-    border: 2px solid rgba(209, 209, 209, 0.444);
-    object-fit: cover;
-    cursor: pointer;
-    object-position: center;
-    transition: box-shadow 0.3s ease-in-out;
-  }
+  width: 72px;
+  height: 72px;
+  min-height: 72px;
+  border-radius: 12px;
+  border: 2px solid rgba(209, 209, 209, 0.444);
+  object-fit: cover;
+  cursor: pointer;
+  object-position: center;
+  transition: box-shadow 0.3s ease-in-out;
+}
 
-  .hover-shadow:hover {
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-  }
+.hover-shadow:hover {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
 
 @media only screen and (max-width: 600px) {
     .intro.joined {
       text-align: left !important;
     }
-  }
+}
         </style>
     </head>
     <body class="is-preload">
@@ -130,11 +133,13 @@ body {
                 <!-- Panel (Banner) -->
                 <section class="panel banner right">
                     <div class="content span-3-75" style="background-color: black;">
-                        
+                      <!-- Changed flex settings for left alignment -->
+                      <div style="display: flex; flex-direction: column; align-items: flex-start; width: 100%;">
+                        <img src="images/neues-logo/Logo-BrokenLines-B.png" style="height: 56px; object-fit: contain; object-position: center;" alt="" /> 
+                      </div>
                         <h1 class="major">Hi, Ich bin<br />
-                        
                             Katrin Harder</h1>
-                        <p>Ich zeichne und kreiere am liebsten <a href="https://html5up.net">Kunst und Illustrationen</a>. In Verbindung
+                        <p>Ich zeichne und kreiere am liebsten Kunst und Illustrationen. In Verbindung
                             mit Musik. Sei auf dem Laufenden und schau auf Instagram vorbei.</p> 
                        
                         <ul class="icons">
@@ -144,13 +149,16 @@ body {
                         </ul>
                     </div>
                     <div class="image filtered span-1-75 image-container" data-position="25% 25%">
-                        <img src="images/about-me/Portrait-Augen-auf.png" alt="" />
+                        <!-- Added hover events to swap the image source -->
+                        <img src="images/about-me/Portrait-Augen-auf.png" alt="" 
+                             onmouseover="this.src='images/about-me/Portrait-gesplittertes-Glas.png'" 
+                             onmouseout="this.src='images/about-me/Portrait-Augen-auf.png'" />
                     </div>
                 </section>
 
-                 <!-- Panel (Gallery) -->
-                 <section class="panel" style="background-color: white; color: black;">
-                    <div class="intro ">
+                <!-- Panel (Gallery) -->
+                <section class="panel" style="background-color: white; color: black;">
+                    <div class="intro">
                         <h2 class="major" style="color: black;">Meine Kunst</h2>
                         <p>Einige Darstellungen meiner Zeichnungen, darunter kurze Beschreibung</p>
                     </div>
@@ -162,7 +170,6 @@ body {
                             </a>
                             <a class="image filtered span-1-5" data-position="center">
                                 <img src="images/eigene-kunst/über-den-Wolken.jpg" alt="" />
-                                
                                 <figcaption>Über den Wolken (Fineliner, Marker auf Papier)</figcaption>
                             </a>
                             <a class="image filtered span-1-5" data-position="bottom">
@@ -200,7 +207,7 @@ body {
                 </section>
 
                 <!-- Panel (Exhibition/Ausstellung) -->
-                <section class="panel "
+                <section class="panel"
                          style="
                            width: 100%;
                            max-width: 960px;
@@ -211,7 +218,6 @@ body {
                            background-color: black;
                            color: white;
                          ">
-                  <!-- Override the 22rem width from _panel.scss -->
                   <div class="intro joined"
                        style="
                          width: auto !important; 
@@ -220,20 +226,16 @@ body {
                          text-align: center;
                        ">
                     <h2 class="major">Exhibition/Ausstellung</h2>
-
-                    <!-- Columns Container -->
                     <div class="columns"
                          style="
                            display: flex;
                            flex-wrap: wrap;
                            justify-content: center;
-                           gap: 2rem; /* Space between columns */
+                           gap: 2rem;
                            margin-top: 20px;
                          ">
-                      <!-- Column 1 -->
                       <div class="column"
                            style="
-                             /* On desktop, each column is about one-third of container */
                              flex: 1 1 calc(33.333% - 2rem);
                              min-width: 160px;
                              box-sizing: border-box;
@@ -243,8 +245,6 @@ body {
                             über 70 Werken vom 06.10.2023 bis 01.03.2024.
                         </p>
                       </div>
-
-                      <!-- Column 2 -->
                       <div class="column"
                            style="
                              flex: 1 1 calc(33.333% - 2rem);
@@ -256,8 +256,6 @@ body {
                             Werken vom 16.03.2024 bis 05.05.2024.
                         </p>
                       </div>
-
-                      <!-- Column 3 -->
                       <div class="column"
                            style="
                              flex: 1 1 calc(33.333% - 2rem);
@@ -270,13 +268,11 @@ body {
                         </p>
                       </div>
                     </div>
-                    <!-- /Columns Container -->
                   </div>
                 </section>
 
                 <!-- Mobile Overrides -->
                 <style>
-                  /* On screens <= 768px, stack columns */
                   @media screen and (max-width: 768px) {
                     .panel.color1 .columns {
                       flex-direction: column !important;
@@ -285,240 +281,241 @@ body {
                     .panel.color1 .column {
                       flex: 1 1 100% !important;
                       min-width: auto !important;
-                      max-width: 500px; /* Optional for readability */
+                      max-width: 500px;
                     }
                   }
                 </style>
 
-<!-- Panel (Customized Artwork/Collaborations) -->
-<section class="panel spotlight large left" style="background-color: black; color: white;">
-  <div class="content span-5">
-    <h2 class="major" style="text-shadow: 0px 2px 6px rgba(0,0,0,0.3);">
-      Customized Artwork/Collaborations
-    </h2>
-    <p style="text-shadow: 0px 2px 6px rgba(0,0,0,0.4);">
-      Neben meiner eigenen Kunst gehe ich gerne Kollaborationen in Verbindung mit Musik ein.
-      Lasst eure Musik durch individuelle Bilder in Form von Illustrationen und Layouts für eure neue
-      Veröffentlichung sprechen. Ich liebe Musik!
-    </p>
-
-    <!-- Thumbnail Gallery: 2 rows, 4 images per row -->
-    <div 
-      class="custom-collab-gallery" 
+                <!-- Panel (Customized Artwork/Collaborations) -->
+                <section class="panel spotlight large left" style="background-color: black; color: white;">
+                  <div class="content span-5">
+                    <h2 class="major" style="text-shadow: 0px 2px 6px rgba(0,0,0,0.3);">
+                      Customized Artwork/Collaborations
+                    </h2>
+                    <p style="text-shadow: 0px 2px 6px rgba(0,0,0,0.4);">
+                      Neben meiner eigenen Kunst gehe ich gerne Kollaborationen in Verbindung mit Musik ein.
+                      Lasst eure Musik durch individuelle Bilder in Form von Illustrationen und Layouts für eure neue
+                      Veröffentlichung sprechen. Ich liebe Musik!
+                    </p>
+                    <div class="custom-collab-gallery" 
+                      style="
+                        display: flex; 
+                        flex-wrap: wrap; 
+                        gap: 1rem; 
+                        margin-top: 1rem; 
+                        justify-content: center;
+                      ">
+                  <!-- 1 -->
+      <a 
+      class="image-container" 
       style="
-        display: flex; 
-        flex-wrap: wrap; 
-        gap: 1rem; 
-        margin-top: 1rem; 
-        justify-content: center;
+        flex: 0 0 calc(25% - 1rem); 
+        text-decoration: none; 
+        outline: none; 
+        border: none;
       "
     >
-      <!-- 1 -->
-      <a 
-        class="image-container" 
-        style="
-          flex: 0 0 calc(25% - 1rem); 
-          text-decoration: none; 
-          outline: none; 
-          border: none;
-        "
-      >
-        <img 
-          src="images/customized-art/Drumbase RSM.jpg" 
-          alt="" 
-          class="hover-shadow"
-        />
-        <!-- Hidden caption for the lightbox -->
-        <figcaption style="display: none;">Illustrationen und Layouts für Merchandise, Veranstaltungen, Konzertankündigungen,
-          Bühnengestaltung etc. für die“ Röbeler Stadtmusikanten“</figcaption>
-      </a>
+      <img 
+        src="images/customized-art/Drumbase RSM.jpg" 
+        alt="" 
+        class="hover-shadow"
+      />
+      <!-- Hidden caption for the lightbox -->
+      <figcaption style="display: none;">Illustrationen und Layouts für Merchandise, Veranstaltungen, Konzertankündigungen,
+        Bühnengestaltung etc. für die“ Röbeler Stadtmusikanten“</figcaption>
+    </a>
 
-      <!-- 2 -->
-      <a 
-        class="image-container" 
-        style="
-          flex: 0 0 calc(25% - 1rem); 
-          text-decoration: none; 
-          outline: none; 
-          border: none;
-        "
-      >
-        <img 
-          src="images/customized-art/GE Live Rec Produktansichtr.jpg" 
-          alt="" 
-          class="hover-shadow"
-        />
-        <figcaption style="display: none;">Artwork und Layout für die EP und Fanbox von Growing Echo „Live Recordings“ / Logodesign
-          für Growing Echo</figcaption>
-      </a>
+    <!-- 2 -->
+    <a 
+      class="image-container" 
+      style="
+        flex: 0 0 calc(25% - 1rem); 
+        text-decoration: none; 
+        outline: none; 
+        border: none;
+      "
+    >
+      <img 
+        src="images/customized-art/GE Live Rec Produktansichtr.jpg" 
+        alt="" 
+        class="hover-shadow"
+      />
+      <figcaption style="display: none;">Artwork und Layout für die EP und Fanbox von Growing Echo „Live Recordings“ / Logodesign
+        für Growing Echo</figcaption>
+    </a>
 
-      <!-- 3 -->
-      <a 
-        class="image-container" 
-        style="
-          flex: 0 0 calc(25% - 1rem); 
-          text-decoration: none; 
-          outline: none; 
-          border: none;
-        "
-      >
-        <img  
-          src="images/customized-art/GE Live Recordings Cover.png" 
-          alt="" 
-          class="hover-shadow"
-        />
-        <figcaption style="display: none;">Artwork und Layout für die EP und Fanbox von Growing Echo „Live Recordings“ / Logodesign
-          für Growing Echo</figcaption>
-      </a>
+    <!-- 3 -->
+    <a 
+      class="image-container" 
+      style="
+        flex: 0 0 calc(25% - 1rem); 
+        text-decoration: none; 
+        outline: none; 
+        border: none;
+      "
+    >
+      <img  
+        src="images/customized-art/GE Live Recordings Cover.png" 
+        alt="" 
+        class="hover-shadow"
+      />
+      <figcaption style="display: none;">Artwork und Layout für die EP und Fanbox von Growing Echo „Live Recordings“ / Logodesign
+        für Growing Echo</figcaption>
+    </a>
 
-      <!-- 4 -->
-      <a 
-        class="image-container" 
-        style="
-          flex: 0 0 calc(25% - 1rem); 
-          text-decoration: none; 
-          outline: none; 
-          border: none;
-        "
-      >
-        <img  
-          src="images/customized-art/GE Monarch Cover.jpg" 
-          alt="" 
-          class="hover-shadow"
-        />
-        <figcaption style="display: none;">Coverdesign zu der Single „Flight oft the Monarchs“ von Growing Echo </figcaption>
-      </a>
+    <!-- 4 -->
+    <a 
+      class="image-container" 
+      style="
+        flex: 0 0 calc(25% - 1rem); 
+        text-decoration: none; 
+        outline: none; 
+        border: none;
+      "
+    >
+      <img  
+        src="images/customized-art/GE Monarch Cover.jpg" 
+        alt="" 
+        class="hover-shadow"
+      />
+      <figcaption style="display: none;">Coverdesign zu der Single „Flight oft the Monarchs“ von Growing Echo </figcaption>
+    </a>
 
-      <!-- 5 -->
-      <a 
-        class="image-container" 
-        style="
-          flex: 0 0 calc(25% - 1rem); 
-          text-decoration: none; 
-          outline: none; 
-          border: none;
-        "
-      >
-        <img  
-          src="images/customized-art/IC Falkenberg Komm an Land Cover.jpg" 
-          alt="" 
-          class="hover-shadow"
-        />
-        <figcaption style="display: none;">Illustration „Fliegendes Schiff aus rotem Sand“ für das Album „Komm an Land“ von IC
-          Falkenberg</figcaption>
-      </a>
+    <!-- 5 -->
+    <a 
+      class="image-container" 
+      style="
+        flex: 0 0 calc(25% - 1rem); 
+        text-decoration: none; 
+        outline: none; 
+        border: none;
+      "
+    >
+      <img  
+        src="images/customized-art/IC Falkenberg Komm an Land Cover.jpg" 
+        alt="" 
+        class="hover-shadow"
+      />
+      <figcaption style="display: none;">Illustration „Fliegendes Schiff aus rotem Sand“ für das Album „Komm an Land“ von IC
+        Falkenberg</figcaption>
+    </a>
 
-      <!-- 6 -->
-      <a 
-        class="image-container" 
-        style="
-          flex: 0 0 calc(25% - 1rem); 
-          text-decoration: none; 
-          outline: none; 
-          border: none;
-        "
-      >
-        <img  
-          src="images/customized-art/Komm An Land Produktansicht.jpg" 
-          alt="" 
-          class="hover-shadow"
-        />
-        <figcaption style="display: none;">Illustration „Fliegendes Schiff aus rotem Sand“ für das Album „Komm an Land“ von IC
-          Falkenberg</figcaption>
-      </a>
+    <!-- 6 -->
+    <a 
+      class="image-container" 
+      style="
+        flex: 0 0 calc(25% - 1rem); 
+        text-decoration: none; 
+        outline: none; 
+        border: none;
+      "
+    >
+      <img  
+        src="images/customized-art/Komm An Land Produktansicht.jpg" 
+        alt="" 
+        class="hover-shadow"
+      />
+      <figcaption style="display: none;">Illustration „Fliegendes Schiff aus rotem Sand“ für das Album „Komm an Land“ von IC
+        Falkenberg</figcaption>
+    </a>
 
-      <!-- 7 -->
-      <a 
-        class="image-container" 
-        style="
-          flex: 0 0 calc(25% - 1rem); 
-          text-decoration: none; 
-          outline: none; 
-          border: none;
-        "
-      >
-        <img  
-          src="images/customized-art/Sivan Arched Path Cover.jpg" 
-          alt="" 
-          class="hover-shadow"
-        />
-        <figcaption style="display: none;">Coverdesign zu dem Album „Arched Path“ von Sivan Amran</figcaption>
-      </a>
+    <!-- 7 -->
+    <a 
+      class="image-container" 
+      style="
+        flex: 0 0 calc(25% - 1rem); 
+        text-decoration: none; 
+        outline: none; 
+        border: none;
+      "
+    >
+      <img  
+        src="images/customized-art/Sivan Arched Path Cover.jpg" 
+        alt="" 
+        class="hover-shadow"
+      />
+      <figcaption style="display: none;">Coverdesign zu dem Album „Arched Path“ von Sivan Amran</figcaption>
+    </a>
 
-      <!-- 8 -->
-      <a 
-        class="image-container" 
-        style="
-          flex: 0 0 calc(25% - 1rem); 
-          text-decoration: none; 
-          outline: none; 
-          border: none;
-        "
-      >
-        <img  
-          src="images/customized-art/Sivan Scrape Cover.png" 
-          alt="" 
-          class="hover-shadow"
-        />
-        <figcaption style="display: none;">Coverdesign zu der Single „Scrape“ von Sivan Amran</figcaption>
-      </a>
-    </div>
-    <!-- End Thumbnail Gallery -->
-
+    <!-- 8 -->
+    <a 
+      class="image-container" 
+      style="
+        flex: 0 0 calc(25% - 1rem); 
+        text-decoration: none; 
+        outline: none; 
+        border: none;
+      "
+    >
+      <img  
+        src="images/customized-art/Sivan Scrape Cover.png" 
+        alt="" 
+        class="hover-shadow"
+      />
+      <figcaption style="display: none;">Coverdesign zu der Single „Scrape“ von Sivan Amran</figcaption>
+    </a>
   </div>
-  <div stlye="" class="image filtered tinted image-container" data-position="center">
-    <img src="images/customized-art/Sammeldarstellung2.jpg" alt="" />
-  </div>
+  <!-- End Thumbnail Gallery -->
+
+</div>
+<div stlye="" class="image filtered tinted image-container" data-position="center">
+  <img src="images/customized-art/Sammeldarstellung2.jpg" alt="" />
+</div>
 </section>
                
-
                 <!-- Panel (Events) -->
-                <section class="panel "
+                <section class="panel"
                 style="
-                  /* Let the panel expand up to 1200px on large screens */
                   width: 100%;
                   max-width: 720px;
                   margin: 0 auto;
                   padding: 2rem 1rem;
                   box-sizing: border-box;
-                  height: auto; /* No forced height */
+                  height: auto;
                   background-color: black;
                   color: white;
                 ">
-                <!-- Override any fixed width from _panel.scss -->
                 <div class="intro joined"
                 style="
-                width: auto !important;
-                max-width: 640px;
-                margin: 0 auto;
-                text-align: center;
+                  width: auto !important;
+                  max-width: 640px;
+                  margin: 0 auto;
+                  text-align: center;
                 ">
                 <h2 class="major">Events</h2>
                 <p style="text-align: left;">
-                    
-                Vernissage am 06.10.2023 zu „Der Rote Faden – Jede Linie führt zur Musik“  
-                Eröffnungsveranstaltung mit einem Unplugged Konzert von Growing Echo
+                    Vernissage am 06.10.2023 zu „Der Rote Faden – Jede Linie führt zur Musik“  
+                    Eröffnungsveranstaltung mit einem Unplugged Konzert von Growing Echo
                 </p>
                 <p style="text-align: left;">
-                    
-                Finissage am 01.03.2024 zu „Der Rote Faden – Jede Linie führt zur Musik“  
-                Abschlussveranstaltung mit einem Live-Online Konzert von Sivan Amran und  
-                Oren Gilad (Shadow Ensemble)
+                    Finissage am 01.03.2024 zu „Der Rote Faden – Jede Linie führt zur Musik“  
+                    Abschlussveranstaltung mit einem Live-Online Konzert von Sivan Amran und  
+                    Oren Gilad (Shadow Ensemble)
                 </p>
                 </div>
                 </section>
 
-                <!-- Panel (Kontakt) -->
-                <section class="panel " style="background-color: white; color: black;">
-                    <div class="intro ">
-                        <h2 class="major" style="color: black;">Kontakt</h2>
-                        <p>brokenlines-art@gmail.com oder katrin.harder@brokenlines-art.com</p>
-                    </div>
-                </section>
+                <!-- Panel (Kontakt) with Impressum link -->
+        <section class="panel" style="background-color: white; color: black;">
+          <div class="intro">
+            <h2 class="major" style="color: black;">Kontakt</h2>
+            <p>brokenlines-art@gmail.com oder katrin.harder@brokenlines-art.com</p>
+            <!-- Instead of toggling a small Impressum div here, we now use a link to show the dedicated Impressum page -->
+            <a href="javascript:void(0)" id="impressumLink" style="color: black; cursor: pointer;">Impressum</a>
+          </div>
+        </section>
 
-            </div>
-        </div>
-
+        <!-- New Impressum Page Section (hidden by default) -->
+        <section id="impressumPage" style="display: none; background-color: black; padding: 64px;">
+          <h2>Impressum</h2>
+          <p>
+            Hier steht das Impressum. Ersetzen Sie diesen Text durch Ihr tatsächliches Impressum.
+          </p>
+          <!-- Back link to restore the original view -->
+          <a href="javascript:void(0)" id="backLink">Zurück</a>
+        </section>
+      </div>
+    </div>
         <!-- Scripts -->
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/js/browser.min.js"></script>
@@ -526,67 +523,78 @@ body {
         <script src="assets/js/main.js"></script>
 
         <!-- =========================================
-             Lightbox JavaScript
+             Lightbox and Impressum Toggle JavaScript
         ========================================= -->
         <script>
 document.addEventListener('DOMContentLoaded', function() {
-	// Create and insert the lightbox
-	const lightbox = document.createElement('div');
-	lightbox.classList.add('lightbox-modal');
+  // Create and insert the lightbox
+  const lightbox = document.createElement('div');
+  lightbox.classList.add('lightbox-modal');
 
-	const lightboxContent = document.createElement('div');
-	lightboxContent.classList.add('lightbox-content');
+  const lightboxContent = document.createElement('div');
+  lightboxContent.classList.add('lightbox-content');
 
-	const closeBtn = document.createElement('span');
-	closeBtn.classList.add('lightbox-close');
-	closeBtn.innerHTML = '&times;'; // You can replace this with a custom icon
+  const closeBtn = document.createElement('span');
+  closeBtn.classList.add('lightbox-close');
+  closeBtn.innerHTML = '&times;';
 
-	const lightboxImg = document.createElement('img');
-	lightboxImg.classList.add('lightbox-img');
+  const lightboxImg = document.createElement('img');
+  lightboxImg.classList.add('lightbox-img');
 
-	const lightboxCaption = document.createElement('div');
-	lightboxCaption.classList.add('lightbox-caption');
+  const lightboxCaption = document.createElement('div');
+  lightboxCaption.classList.add('lightbox-caption');
 
-	// Assemble the structure
-	lightboxContent.appendChild(closeBtn);
-	lightboxContent.appendChild(lightboxImg);
-	lightboxContent.appendChild(lightboxCaption);
-	lightbox.appendChild(lightboxContent);
-	document.body.appendChild(lightbox);
+  lightboxContent.appendChild(closeBtn);
+  lightboxContent.appendChild(lightboxImg);
+  lightboxContent.appendChild(lightboxCaption);
+  lightbox.appendChild(lightboxContent);
+  document.body.appendChild(lightbox);
 
-	// A helper to close the lightbox
-	function closeLightbox() {
-		lightbox.style.display = 'none';
-	}
+  function closeLightbox() {
+    lightbox.style.display = 'none';
+  }
 
-	// Close on the [x] click
-	closeBtn.addEventListener('click', closeLightbox);
+  closeBtn.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', (event) => {
+    if (event.target === lightbox) {
+      closeLightbox();
+    }
+  });
 
-	// *** Close if user clicks on the lightbox overlay (but not the content)
-	lightbox.addEventListener('click', (event) => {
-		// If the click target is the overlay itself (not its children), close.
-		if (event.target === lightbox) {
-			closeLightbox();
-		}
-	});
+  const containers = document.querySelectorAll('.image-container');
+  containers.forEach(container => {
+    const images = container.querySelectorAll('img');
+    images.forEach(img => {
+      const caption = img.closest('a')?.querySelector('figcaption') || container.querySelector('figcaption');
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightboxCaption.textContent = caption ? caption.textContent : '';
+        lightbox.style.display = 'block';
+      });
+    });
+  });
 
-	// Now add click events to images in .image-container
-	const containers = document.querySelectorAll('.image-container');
-
-	containers.forEach(container => {
-		const images = container.querySelectorAll('img');
-		images.forEach(img => {
-			// Try to find a <figcaption> near the image
-			const caption = img.closest('a')?.querySelector('figcaption') 
-						  || container.querySelector('figcaption');
-			img.addEventListener('click', () => {
-				lightboxImg.src = img.src;
-				lightboxCaption.textContent = caption ? caption.textContent : '';
-				lightbox.style.display = 'block';
-			});
-		});
-	});
-});
-        </script>
-    </body>
+ // When the Impressum link is clicked:
+ document.getElementById('impressumLink').addEventListener('click', function() {
+          // Hide all panels (using the "panel" class)
+          const panels = document.querySelectorAll('.panel');
+          panels.forEach(panel => {
+            panel.style.display = 'none';
+          });
+          // Show the Impressum page section
+          document.getElementById('impressumPage').style.display = 'block';
+        });
+        // Back link to restore view
+        document.getElementById('backLink').addEventListener('click', function() {
+          // Hide the Impressum page section
+          document.getElementById('impressumPage').style.display = 'none';
+          // Restore display for all panels (removing inline display styling)
+          const panels = document.querySelectorAll('.panel');
+          panels.forEach(panel => {
+            panel.style.display = '';
+          });
+        });
+      });
+    </script>
+  </body>
 </html>
