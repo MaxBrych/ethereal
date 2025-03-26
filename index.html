@@ -597,7 +597,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const caption = img.closest('a')?.querySelector('figcaption') || container.querySelector('figcaption');
       img.addEventListener('click', () => {
         lightboxImg.src = img.src;
-        lightboxCaption.textContent = caption ? caption.textContent : '';
+        lightboxCaption.innerHTML = caption ? caption.innerHTML : '';
         lightbox.style.display = 'block';
       });
     });
