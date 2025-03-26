@@ -1,5 +1,4 @@
 @import url(fontawesome-all.min.css);
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300i,400i");
 
 /*
 	Ethereal by HTML5 UP
@@ -299,10 +298,7 @@ input, select, textarea {
 			color: #ffe4b4;
 		}
 
-	strong, b {
-		color: rgba(255, 255, 255, 0.875);
-		font-weight: 400;
-	}
+	
 
 	em, i {
 		font-style: italic;
@@ -921,6 +917,8 @@ body {
 	-webkit-text-size-adjust: none;
 }
 
+
+
 mark {
 	background-color: transparent;
 	color: inherit;
@@ -1173,10 +1171,7 @@ input, select, textarea {
 			color: #ffe4b4;
 		}
 
-	strong, b {
-		color: rgba(255, 255, 255, 0.875);
-		font-weight: 400;
-	}
+
 
 	em, i {
 		font-style: italic;
@@ -1481,6 +1476,8 @@ input, select, textarea {
 		font-weight: 700;
 		margin: 0 0 0.4875rem 0;
 	}
+	
+	
 
 	input[type="text"],
 	input[type="password"],

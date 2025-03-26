@@ -32,6 +32,9 @@ body {
     max-width: 500px;/* Optional: limit max width for readability */
   }
 }
+.image figcaption strong {
+    font-weight: 800 !important;
+}
 
 .image-container {
   position: relative;
@@ -112,6 +115,20 @@ body {
   transition: box-shadow 0.3s ease-in-out;
 }
 
+.gallery .image figcaption strong,
+.gallery .group .image figcaption strong {
+    font-weight: 900 !important; /* Maximum boldness */
+}
+.gallery figcaption strong {
+    font-weight: 900 !important;
+    letter-spacing: -0.02em; /* Tighter letter spacing often helps bold text appear bolder */
+    color: #000; /* Ensuring maximum contrast */
+}
+.gallery figcaption strong {
+    font-family: Arial, Helvetica, sans-serif; /* A font with good bold support */
+    font-weight: bold !important;
+}
+
 .hover-shadow:hover {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
@@ -165,42 +182,46 @@ body {
                         <div class="group span-3 image-container">
                             <a class="image filtered span-3" data-position="center">
                                 <img src="images/eigene-kunst/Herzschlag.jpg" alt="" />
-                                <figcaption>Herzschlag (Fineliner, Marker, Buntstift auf Papier)</figcaption>
+                                <figcaption><strong style="font-weight: bold;">Herzschlag</strong> (Fineliner, Marker, Buntstift auf Papier)</figcaption>
                             </a>
                             <a class="image filtered span-1-5" data-position="center">
                                 <img src="images/eigene-kunst/über-den-Wolken.jpg" alt="" />
-                                <figcaption>Über den Wolken (Fineliner, Marker auf Papier)</figcaption>
+                                <figcaption><strong style="font-weight: bold;">Über den Wolken</strong> (Fineliner, Marker auf Papier)</figcaption>
                             </a>
                             <a class="image filtered span-1-5" data-position="bottom">
                                 <img src="images/eigene-kunst/Gepaeck.jpg" alt="" />
-                                <figcaption>Gepäck (Fineliner, Marker auf Papier)</figcaption>
+                                <figcaption><strong style="font-weight: bold;">Gepäck</strong> (Fineliner, Marker auf Papier)</figcaption>
                             </a>
                         </div>
                         <a class="image filtered span-2-5 image-container" data-position="top">
                             <img src="images/eigene-kunst/Phase.jpg" alt="" />
-                            <figcaption>Phase (Fineliner, Marker auf Papier)</figcaption>
+                            <figcaption><strong style="font-weight: bold;">Phase</strong> (Fineliner, Marker auf Papier)</figcaption>
                         </a>
                         <div class="group span-4-5 image-container">
-                            <a class="image filtered span-3" data-position="center">
-                                <img src="images/eigene-kunst/Feuervogel.jpg" alt="" />
-                                <figcaption><b>Feuervogel</b> (Fineliner, Marker, Buntstift auf Papier)</figcaption>
-                            </a>
+                          <a class="image filtered span-3" data-position="center">
+                            <img src="images/eigene-kunst/Feuervogel.jpg" alt="" />
+                            <figcaption><strong style="font-weight: 900 !important; display: inline-block;">Feuervogel</strong> (Fineliner, Marker, Buntstift auf Papier)</figcaption>
+
+                        </a>
+                        
                             <a class="image filtered span-1-5" data-position="center">
                                 <img src="images/eigene-kunst/Wachsen.jpg" alt="" />
-                                <figcaption><b>Wachsen</b> (Fineliner, Marker auf Papier)</figcaption>
+                                <figcaption><strong style="font-weight: bold;">Wachsen</strong> (Fineliner, Marker auf Papier)</figcaption>
+                                  
                             </a>
                             <a class="image filtered span-1-5" data-position="bottom">
                                 <img src="images/eigene-kunst/5-Bienen.jpg" alt="" />
-                                <figcaption> <b>5 Bienen</b> (Fineliner, Marker auf Papier)</figcaption>
+                                <figcaption> <strong style="font-weight: bold;">5 Bienen</strong> (Fineliner, Marker auf Papier)</figcaption>
                             </a>
                             <a class="image filtered span-3" data-position="top">
                                 <img src="images/eigene-kunst/Feuerball.jpg" alt="" />
-                                <figcaption><b>Feuerball</b> (Fineliner, Marker auf Papier)</figcaption>
+                                <figcaption><strong style="font-weight: bold;">Feuerball</strong> (Fineliner, Marker auf Papier)</figcaption>
                             </a>
                         </div>
                         <a class="image filtered span-2-5 image-container" data-position="right">
                             <img src="images/eigene-kunst/Lost-Tape.jpg" alt="" />
-                            <figcaption><b>Lost Tape</b> (Fineliner, Marker auf Papier)</figcaption>
+                            <figcaption><strong style="font-weight: bold;">Lost Tape</strong> (Fineliner, Marker auf Papier)</figcaption>
+                            
                         </a>
                     </div>
                 </section>
